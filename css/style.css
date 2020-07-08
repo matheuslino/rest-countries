@@ -1,0 +1,104 @@
+/*
+Project: rest-countries
+Version: 1.0.0
+Author: Matheus A. Lino
+Author URI: https://matheuslino.com.br
+License: Closed Source Software - All Rights Reserved
+*/
+
+
+/*--------------------------------------------------------------
+# General configs
+--------------------------------------------------------------*/
+body > .container {
+  /*max-width: 720px;*/
+  min-height: 70%;
+}
+.flag {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+# Temp
+--------------------------------------------------------------*/
+.table-fixed tbody {
+  height: auto;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead,
+.table-fixed tbody,
+.table-fixed tr,
+.table-fixed td,
+.table-fixed th {
+  display: block;
+}
+.table-fixed tbody td,
+.table-fixed tbody th,
+.table-fixed thead>tr>th {
+  float: left;
+  position: relative;
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+.panel-group .panel {
+  box-shadow: none;
+  border: solid thin #EEEEEE;
+  margin-top: 8px;
+}
+.panel-default>.panel-heading {
+  padding: 0;
+  color: #212121;
+  background-color: #FAFAFA;
+}
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 1.3em 1em;
+  text-decoration: none;
+}
+.panel-default a .panel-title {
+  display: flex;
+  margin-right: 2em !important;
+  text-align: left;
+  font-weight: bold;
+  color: #777;
+}
+.panel-body ul li {
+  list-style: circle;
+  text-align: justify;
+  line-height: 2em;
+}
+.more-less {
+  float: right;
+  color: #212121;
+}
+
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+  width: 100%;
+  text-align: center;
+}
+footer hr {
+  border-top: 1px solid #ccc;
+  width: 75%;
+}
+.copy {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.copy span:nth-child(2n) {
+  font-size: .8rem;
+  color: #888;
+}
+.copy a {
+  color: #888 !important;
+}
