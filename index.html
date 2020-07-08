@@ -23,12 +23,15 @@
 <body class="bg-light mx-3 mx-md-0">
 
   <div class="container my-4 my-md-5 shadow bg-white">
-    <div class="row justify-content-center">
-      <div class="col-12 text-center py-4 rounded-top text-light bg-info">
-        <h4>REST API - Get countries</h4>
+    <div class="row justify-content-between">
+      <div class="col-12 py-4 rounded-top text-light bg-info">
+        <button id="btn-return" type="button" class="btn btn-light position-absolute">Voltar</button>
+        <h4 id="title1" class="text-md-center">REST API</h4>
       </div>
     </div>
-    <section id="content">
+
+    <!-- First view -->
+    <section id="content-home">
       <div class="row mt-md-5 justify-content-center">
         <div class="col-12 col-md-3 mt-4 mt-md-0">
           <select id="region-select" class="browser-default custom-select">
@@ -51,7 +54,7 @@
           <button id="search" type="button" class="btn btn-info w-100">Pesquisar</button>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center pb-0 pb-md-5">
         <div class="col-12 my-md-5">
           <hr class="w-50 my-4 my-md-0 shadow">
         </div>
@@ -71,14 +74,78 @@
           </a>
         </div>
       </div>
-    </section>    
+    </section>
+
+    <!-- Second view -->
+    <section id="content-details" class="d-none">
+      <div class="row justify-content-center pt-4 pb-0 py-md-5">
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <a href="">
+            <img src="https://restcountries.eu/data/bra.svg" class="flag bg-light border shadow h-100">
+          </a>
+        </div>
+        <div class="col-12 col-md-5 mb-4 mb-md-0">
+          <table class="table table-fixed table-hover border">
+            <tbody>
+              <tr>
+                <td class="col-5 bg-light font-weight-bold">Nome</td>
+                <td class="col-7 text-right">Nome</td>
+              </tr>
+              <tr>
+                <td class="col-5 bg-light font-weight-bold">Capital</td>
+                <td class="col-7 text-right">Capital</td>
+              </tr>
+              <tr>
+                <td class="col-5 bg-light font-weight-bold">Região</td>
+                <td class="col-7 text-right">Região</td>
+              </tr>
+              <tr>
+                <td class="col-5 bg-light font-weight-bold">Sub-região</td>
+                <td class="col-7 text-right">xxxxxxx</td>
+              </tr>
+              <tr>
+                <td class="col-5 bg-light font-weight-bold">População</td>
+                <td class="col-7 text-right">xxxxxxx</td>
+              </tr>
+              <tr>
+                <td class="col-5 bg-light font-weight-bold">Linguas</td>
+                <td class="col-7 text-right">Português</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row justify-content-center pb-0 pb-md-5 px-3 px-md-0">
+          <div class="col-12 my-md-5">
+            <hr class="w-50 my-2 my-md-0 shadow">
+          </div>
+          <div class="col-12 mb-5 text-center">
+            Países vizinhos:
+          </div>
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <a href="">
+              <img src="https://restcountries.eu/data/bra.svg" class="flag shadow">
+            </a>
+          </div>
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <a href="">
+              <img src="https://restcountries.eu/data/bra.svg" class="flag shadow">
+            </a>
+          </div>
+          <div class="col-12 col-md-3 mb-4 mb-md-0">
+            <a href="">
+              <img src="https://restcountries.eu/data/bra.svg" class="flag shadow">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> 
   </div>
 </div>
 </div>
 
-<footer id="colophon" class="site-footer">
-  <div class="site-info container px-4 px-lg-0 py-4">
-    <hr class=" my-md-4" />
+<footer id="colophon" class="site-footer py-4">
+  <div class="site-info container px-4 px-lg-0">
+    <hr class="mb-4" />
     <div class="copy">
       <span>©2020 <a href="https://linkedin.com/in/matheus-lino/" target="_blank">Matheus A. Lino</a> - Todos os direitos reservados.</span>
     </div>
