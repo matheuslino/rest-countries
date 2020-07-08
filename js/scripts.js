@@ -35,14 +35,15 @@ function changeView(add, remove) {
 
 // Return page
 btnReturn.on('click', () => {
-	changeView(contentDetails, contentHome);
+	document.location.reload(true);
 });
 
 // Send data
 btnSearch.on('click', () => {
 	let code = countrySelect.find(":selected").val();
-	changeView(contentHome, contentDetails);
 	getCountryInfo(code);
+	btnReturn.removeClass('d-none');
+	changeView(contentHome, contentDetails);
 });
 
 // Check if it's select or details page
@@ -112,6 +113,7 @@ function updateImages() {
 		let code = $(this).attr("href");
 		getCountryInfo(code);
 		changeView(contentHome, contentDetails);
+		btnReturn.removeClass('d-none');
 	});
 }
 
@@ -148,6 +150,13 @@ function getCountryInfo(code) {
 			})
 			.catch(e => console.log('Error: ' + e));
 		}
+
+		// Format data
+		data.name = data.name.toString().length > 29 ? data.name.slice(0,29) + '...' : data.name + '.';
+		data.capital = data.capital.toString().length > 29 ? data.capital.slice(0,29) + '...' : data.capital + '.';
+		data.region = data.region.toString().length > 29 ? data.region.slice(0,29) + '...' : data.region + '.';
+		data.subregion = data.subregion.toString().length > 29 ? data.subregion.slice(0,29) + '...' : data.subregion + '.';
+		lang = lang.toString().length > 29 ? lang.slice(0,29) + '...' : lang + '.';
 
 		// Store values
 		imgCountryField.attr('src', data.flag);
