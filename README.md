@@ -2,7 +2,7 @@
 >  Get information about countries via a RESTful API.
 
 ### About
-Simples application applying the basic concepts about RESTful API's. The App dinamically calls the endpoints, getting all data, such as  flags, names, population and all other information from other countries.
+Simple application applying the basic concepts about RESTful API's. The App dinamically calls the endpoints, getting all data, such as  flags, names, population and all other information from other countries.
 
 ### Developed with:
 * HTML5
